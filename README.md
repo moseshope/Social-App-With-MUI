@@ -1,2 +1,2 @@
-# Responsive-Material-UI-Project
-This site will work perfectly on both mobile and desktop
+# SOCIAL APP with MUI
+This site works perfectly on mobile and desktop. Feel Free to contribute and leave a star
