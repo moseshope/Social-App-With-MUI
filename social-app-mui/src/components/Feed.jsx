@@ -8,6 +8,9 @@ const Feed = () => {
     <Box flex={4} p={2}>
       <Posts/>
       <Posts/>
+      <Posts/>
+      <Posts/>
+      <Posts/>
     </Box>
   )
 }
