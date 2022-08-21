@@ -1,4 +1,10 @@
-import { Add, AddPhotoAlternate, EmojiEmotions, PersonAdd, VideoCameraBack } from "@mui/icons-material";
+import {
+  Add,
+  AddPhotoAlternate,
+  EmojiEmotions,
+  PersonAdd,
+  VideoCameraBack,
+} from "@mui/icons-material";
 import {
   Avatar,
   Box,
@@ -43,7 +49,14 @@ const AddPost = () => {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box width={400} height={300} bgcolor="white" p={3} borderRadius={3}>
+        <Box
+          width={400}
+          height={300}
+          bgcolor={"background.default"}
+          color={"text.primary"}
+          p={3}
+          borderRadius={3}
+        >
           <Typography
             id="modal-modal-title"
             variant="h6"
@@ -71,11 +84,13 @@ const AddPost = () => {
           />
           <Stack direction="row" gap={1} mt={1} mb={3}>
             <EmojiEmotions color="primary" />
-            <AddPhotoAlternate color="secondary"/>
-            <VideoCameraBack color="success"/>
-            <PersonAdd color="error"/>
+            <AddPhotoAlternate color="secondary" />
+            <VideoCameraBack color="success" />
+            <PersonAdd color="error" />
           </Stack>
-          <Button variant="contained" sx={{ width: "100%" }}>Post</Button>
+          <Button variant="contained" sx={{ width: "100%" }}>
+            Post
+          </Button>
         </Box>
       </StyledModal>
     </>
