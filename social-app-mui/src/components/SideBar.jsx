@@ -1,6 +1,7 @@
-import { AccountBox, Article, Groups, Home, ModeNight, Pages, Person, Settings, Storefront } from "@mui/icons-material";
+import { AccountBox, Article, Groups, Home, ModeNight, Person, Settings, Storefront } from "@mui/icons-material";
 import { Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Switch } from "@mui/material";
 import React from "react";
+import AddPost from "./AddPost";
 
 const SideBar = () => {
   return (
@@ -72,6 +73,7 @@ const SideBar = () => {
       </ListItemButton>
       </ListItem>
       </List>
+      <AddPost/>
       </Box>
     </Box>
   );

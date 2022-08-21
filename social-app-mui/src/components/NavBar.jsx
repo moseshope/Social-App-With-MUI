@@ -49,7 +49,7 @@ const NavBar = () => {
     <AppBar position="sticky">
       <StyledToolBar>
         <Typography variant="h6" sx={{ display: { xs: "none", sm: "block" } }}>
-          LAMA DEV
+          Lama Dev
         </Typography>
         <Pets sx={{ display: { xs: "block", sm: "none" } }} />
         <Search>
@@ -96,6 +96,7 @@ const NavBar = () => {
         >
           <MenuItem>Profile</MenuItem>
           <MenuItem>My account</MenuItem>
+          <MenuItem>Add post</MenuItem>
           <MenuItem>Logout</MenuItem>
         </Menu>
       </StyledToolBar>
