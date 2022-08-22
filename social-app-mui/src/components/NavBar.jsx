@@ -48,8 +48,8 @@ const NavBar = () => {
   return (
     <AppBar position="sticky">
       <StyledToolBar>
-        <Typography variant="h6" sx={{ display: { xs: "none", sm: "block" } }}>
-          Lama Dev
+        <Typography variant="h6" fontWeight={700} sx={{ display: { xs: "none", sm: "block" } }}>
+          Day2Day
         </Typography>
         <Pets sx={{ display: { xs: "block", sm: "none" } }} />
         <Search>
