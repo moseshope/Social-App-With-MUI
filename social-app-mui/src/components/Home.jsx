@@ -1,14 +1,13 @@
 import React from "react";
 import { Box, Stack } from '@mui/material';
 import Feed from './Feed';
-import NavBar from './NavBar';
+//import NavBar from './NavBar';
 import RightBar from './RightBar';
 import SideBar from './SideBar';
 
 const Home = ({mode, setMode}) => {
   return (
     <Box bgcolor={"background.default"} color={"text.primary"}>
-      <NavBar />
       <Stack direction="row" spacing={2} justifyContent="space-between">
         <SideBar setMode={setMode} mode={mode} />
         <Feed />

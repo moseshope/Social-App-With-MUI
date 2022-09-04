@@ -52,7 +52,7 @@ const Posts = () => {
             the mussels, if you like.
           </Typography>
         </CardContent>
-        <CardActions disableSpacing>
+        <CardActions>
           <IconButton aria-label="add to favorites">
             <Checkbox
               icon={<FavoriteBorder />}
