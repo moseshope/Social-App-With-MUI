@@ -1,7 +1,7 @@
 import { createTheme, ThemeProvider } from '@mui/material';
 import React, { useState } from 'react'
 import { Routes, Route } from 'react-router-dom';
-import ProfilePage from './Pages/ProfilePage';
+import ProfilePage from './Pages/Profile/ProfilePage';
 import NavBar from './components/NavBar';
 import Home from './components/Home'
 
