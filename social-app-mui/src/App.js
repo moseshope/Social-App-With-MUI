@@ -4,6 +4,8 @@ import Feed from './components/Feed';
 import NavBar from './components/NavBar';
 import RightBar from './components/RightBar';
 import SideBar from './components/SideBar';
+import { Routes, Route } from 'react-router-dom';
+import ProfilePage from './Pages/ProfilePage';
 
 const App = () => {
   const [mode, setMode] = useState("light");
@@ -24,6 +26,9 @@ const App = () => {
         <RightBar/>
       </Stack>
       </Box>
+      <Routes>
+        <Route path='/profilepage' element={<ProfilePage/>}/>
+      </Routes>
     </ThemeProvider>
   )
 }
