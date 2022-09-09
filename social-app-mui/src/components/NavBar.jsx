@@ -104,7 +104,7 @@ const NavBar = () => {
           <MenuItem>Profile</MenuItem>
           <MenuItem>My account</MenuItem>
           <MenuItem>Add post</MenuItem>
-          <MenuItem>Logout</MenuItem>
+          <MenuItem>Login</MenuItem>
         </Menu>
       </StyledToolBar>
     </AppBar>
