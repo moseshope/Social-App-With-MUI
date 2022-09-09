@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Avatar, Typography } from "@mui/material";
+import Posts from '../../components/Posts'
 
 const MainProfile = () => {
   return (
@@ -21,9 +22,20 @@ const MainProfile = () => {
         <Box sx={{ display: "flex", justifyContent: "center", marginTop: 0.5 }}>
           <Typography variant="h6">Peter Thiel</Typography>
         </Box>
-        <Box sx={{ marginTop: 3, paddingLeft: 1}}>
+        <Box sx={{ marginTop: 3}}>
           <Typography variant="h6">Work Connections</Typography>
           <Typography variant="p">546 connects</Typography>
+        </Box>
+        <Box sx={{ display: "flex", gap: 1}}>
+          <Typography variant="h6">Successful workouts</Typography>
+          <Typography variant="p" sx={{ paddingTop: 1}}>346</Typography>
+        </Box>
+        <Box sx={{display: "flex", gap: 1}}>
+          <Typography variant="h6">Website Url: </Typography>
+          <Typography variant="p" sx={{ paddingTop: 1}}>https://mywebsite.com</Typography>
+        </Box>
+        <Box>
+          <Posts/>
         </Box>
       </Box>
     </React.Fragment>
