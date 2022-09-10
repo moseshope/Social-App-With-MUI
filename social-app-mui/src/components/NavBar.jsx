@@ -49,7 +49,7 @@ const NavBar = () => {
   return (
     <AppBar position="sticky">
       <StyledToolBar>
-        <Link to="/">
+        <Link to="/" style={{ textDecoration: 'none'}}>
           <Typography
             variant="h6"
             fontWeight={700}

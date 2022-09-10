@@ -25,7 +25,7 @@ const Posts = () => {
       <Card sx={{ marginBottom: 5 }}>
         <CardHeader
           avatar={
-            <Link to='/profilepage'>
+            <Link to='/profilepage' style={{ textDecoration: 'none'}}>
               <Avatar sx={{ bgcolor: "red" }} aria-label="recipe">
                 R
               </Avatar>
