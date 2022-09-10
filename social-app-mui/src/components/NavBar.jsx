@@ -44,12 +44,13 @@ const UserBox = styled("div")(({ theme }) => ({
 }));
 
 const NavBar = () => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false); //State for opening Menu Items onClick avatar icon
+  const [openNotificationModal, setOpenNotificationModal] = useState(false);
 
   return (
     <AppBar position="sticky">
       <StyledToolBar>
-        <Link to="/" style={{ textDecoration: 'none'}}>
+        <Link to="/" style={{ textDecoration: "none" }}>
           <Typography
             variant="h6"
             fontWeight={700}
@@ -63,10 +64,14 @@ const NavBar = () => {
           <InputBase placeholder="search..." />
         </Search>
         <Icons>
-          <Badge badgeContent={4} color="error">
+          <Badge badgeContent={4} color="error" onClick={() => alert("Mail clicked")}>
             <Mail />
           </Badge>
-          <Badge badgeContent={4} color="error">
+          <Badge
+            badgeContent={4}
+            color="error"
+            onClick={() => alert("Notification clicked badge")}
+          >
             <Notifications />
           </Badge>
           <Avatar
@@ -90,7 +95,6 @@ const NavBar = () => {
           id="demo-positioned-menu"
           aria-labelledby="demo-positioned-button"
           open={open}
-          // anchorEl not added yet in this app
           onClose={(e) => setOpen(false)}
           anchorOrigin={{
             vertical: "top",
