@@ -9,8 +9,11 @@ import {
   styled,
   Toolbar,
   Typography,
-  Modal, 
-  Box, 
+  Modal,
+  Box,
+  Drawer,
+  ListItem,
+  List,
 } from "@mui/material";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
@@ -47,23 +50,24 @@ const UserBox = styled("div")(({ theme }) => ({
 
 const NavBar = () => {
   const [open, setOpen] = useState(false); //State for opening Menu Items onClick avatar icon
-  const [openMessage, setOpenMessage] = useState(false);
-
-  const handleOpenMessage = () => setOpenMessage(true)
-  const handleCloseMessage = () => setOpenMessage(false)
+  const [openDrawer, setOpenDrawer] = useState(false);
+  const handleDrawerOpen = () => setOpenDrawer(true);
+  const handleDrawerClose = () => setOpenDrawer(false);
+  const [openMessage, setOpenMessage] = useState(false); //State for message modal onClick
+  const handleOpenMessage = () => setOpenMessage(true);
+  const handleCloseMessage = () => setOpenMessage(false);
 
   const style = {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
     width: 400,
-    bgcolor: 'background.paper',
-    border: '2px solid #000',
+    bgcolor: "background.paper",
+    border: "2px solid #000",
     boxShadow: 24,
     p: 4,
   };
-  
 
   return (
     <AppBar position="sticky">
@@ -145,8 +149,22 @@ const NavBar = () => {
           </Typography>
         </Box>
       </Modal>
+
+      {/* Drawer for Notifications */}
+      <Drawer
+        anchor={"right"}
+        open={openDrawer}
+        onClose={handleDrawerClose}
+      >
+        <List>
+          <ListItem>Nofitications</ListItem>
+          <ListItem>Nofitications</ListItem>
+          <ListItem>Nofitications</ListItem>
+          <ListItem>Nofitications</ListItem>
+          <ListItem>Nofitications</ListItem>
+        </List>
+      </Drawer>
     </AppBar>
-    
   );
 };
 
