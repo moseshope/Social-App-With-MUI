@@ -92,7 +92,7 @@ const NavBar = () => {
           <Badge
             badgeContent={4}
             color="error"
-            onClick={() => alert("Notification clicked badge")}
+            onClick={handleDrawerOpen}
           >
             <Notifications />
           </Badge>
@@ -157,11 +157,11 @@ const NavBar = () => {
         onClose={handleDrawerClose}
       >
         <List>
+          <ListItem>The longer the Nofitications the longer the drawer</ListItem>
+          <ListItem>The longer the Nofitications the longer the drawer</ListItem>
+          <ListItem>The longer the Nofitications the longer the drawer</ListItem>
           <ListItem>Nofitications</ListItem>
-          <ListItem>Nofitications</ListItem>
-          <ListItem>Nofitications</ListItem>
-          <ListItem>Nofitications</ListItem>
-          <ListItem>Nofitications</ListItem>
+          <ListItem>The longer the Nofitications the longer the drawer</ListItem>
         </List>
       </Drawer>
     </AppBar>
