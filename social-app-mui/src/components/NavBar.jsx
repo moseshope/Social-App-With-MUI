@@ -9,6 +9,8 @@ import {
   styled,
   Toolbar,
   Typography,
+  Modal, 
+  Box, 
 } from "@mui/material";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
@@ -45,7 +47,23 @@ const UserBox = styled("div")(({ theme }) => ({
 
 const NavBar = () => {
   const [open, setOpen] = useState(false); //State for opening Menu Items onClick avatar icon
-  const [openNotificationModal, setOpenNotificationModal] = useState(false);
+  const [openMessage, setOpenMessage] = useState(false);
+
+  const handleOpenMessage = () => setOpenMessage(true)
+  const handleCloseMessage = () => setOpenMessage(false)
+
+  const style = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 400,
+    bgcolor: 'background.paper',
+    border: '2px solid #000',
+    boxShadow: 24,
+    p: 4,
+  };
+  
 
   return (
     <AppBar position="sticky">
@@ -64,7 +82,7 @@ const NavBar = () => {
           <InputBase placeholder="search..." />
         </Search>
         <Icons>
-          <Badge badgeContent={4} color="error" onClick={() => alert("Mail clicked")}>
+          <Badge badgeContent={4} color="error" onClick={handleOpenMessage}>
             <Mail />
           </Badge>
           <Badge
@@ -111,7 +129,24 @@ const NavBar = () => {
           <MenuItem>Login</MenuItem>
         </Menu>
       </StyledToolBar>
+      {/* Modal for message modal pop up */}
+      <Modal
+        open={openMessage}
+        onClose={handleCloseMessage}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style}>
+          <Typography id="modal-modal-title" variant="h6" component="h2">
+            Text in a modal
+          </Typography>
+          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+          </Typography>
+        </Box>
+      </Modal>
     </AppBar>
+    
   );
 };
 
