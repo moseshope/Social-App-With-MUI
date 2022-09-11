@@ -50,9 +50,11 @@ const UserBox = styled("div")(({ theme }) => ({
 
 const NavBar = () => {
   const [open, setOpen] = useState(false); //State for opening Menu Items onClick avatar icon
+  // Drawer State
   const [openDrawer, setOpenDrawer] = useState(false);
   const handleDrawerOpen = () => setOpenDrawer(true);
   const handleDrawerClose = () => setOpenDrawer(false);
+  // Message State
   const [openMessage, setOpenMessage] = useState(false); //State for message modal onClick
   const handleOpenMessage = () => setOpenMessage(true);
   const handleCloseMessage = () => setOpenMessage(false);
