@@ -4,6 +4,8 @@ import { Routes, Route } from 'react-router-dom';
 import ProfilePage from './Pages/Profile/ProfilePage';
 import NavBar from './components/NavBar';
 import Home from './components/Home'
+import SignIn from './components/SignIn';
+import SignUp from './components/SignUp';
 
 const App = () => {
   const [mode, setMode] = useState("light");
@@ -20,6 +22,8 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home mode={mode} setMode={setMode}/>}/>
         <Route path='/profilepage' element={<ProfilePage/>}/>
+        <Route path='/signIn' element={<SignIn/>}/>
+        <Route path='/signUp' element={<SignUp/>}/>
       </Routes>
     </ThemeProvider>
   )
